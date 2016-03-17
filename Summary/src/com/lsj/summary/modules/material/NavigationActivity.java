@@ -34,8 +34,6 @@ public class NavigationActivity extends BaseActivity {
         toolbar = getView(R.id.toolbar);
         listView = getView(R.id.listview);
 
-
-        
         ItemAdapter adapter = new ItemAdapter(getContext());
         listView.setAdapter(adapter);
 
