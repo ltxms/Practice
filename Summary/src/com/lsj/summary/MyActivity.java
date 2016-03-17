@@ -14,6 +14,7 @@ import com.lsj.summary.modules.material.CoordinatiorDemoActivity;
 import com.lsj.summary.modules.material.CoordinatorLayoutActivity;
 import com.lsj.summary.modules.material.MaterialActivity;
 import com.lsj.summary.modules.material.NavigationActivity;
+import com.lsj.summary.modules.material.TranslucentActivity;
 import com.lsj.summary.modules.tablayout.TabLayoutActivity;
 
 public class MyActivity extends BaseActivity implements OnClickListener{
@@ -27,6 +28,13 @@ public class MyActivity extends BaseActivity implements OnClickListener{
     private Button e;
     private Button f;
     private Button g;
+    private Button h;
+    private Button i;
+    private Button j;
+    private Button k;
+    private Button l;
+    private Button m;
+    private Button n;
 
     /**
      * Called when the activity is first created.
@@ -48,6 +56,13 @@ public class MyActivity extends BaseActivity implements OnClickListener{
         e = getView(R.id.e);
         f = getView(R.id.f);
         g = getView(R.id.g);
+        h = getView(R.id.h);
+        i = getView(R.id.i);
+        j = getView(R.id.j);
+        k = getView(R.id.k);
+        l = getView(R.id.l);
+        m = getView(R.id.m);
+        n = getView(R.id.n);
 
 
         a.setOnClickListener(this);
@@ -57,6 +72,12 @@ public class MyActivity extends BaseActivity implements OnClickListener{
         e.setOnClickListener(this);
         f.setOnClickListener(this);
         g.setOnClickListener(this);
+        h.setOnClickListener(this);
+        i.setOnClickListener(this);
+        j.setOnClickListener(this);
+        k.setOnClickListener(this);
+        m.setOnClickListener(this);
+        n.setOnClickListener(this);
     }
 
     @Override
@@ -82,6 +103,19 @@ public class MyActivity extends BaseActivity implements OnClickListener{
                 break;
             case R.id.g:
                 toActivity(TabLayoutActivity.class);
+                break;
+            case R.id.h:
+                toActivity(TranslucentActivity.class);
+                break;
+            case R.id.i:
+                break;
+            case R.id.j:
+                break;
+            case R.id.k:
+                break;
+            case R.id.m:
+                break;
+            case R.id.n:
                 break;
             default:
                 break;

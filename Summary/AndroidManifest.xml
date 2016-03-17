@@ -35,5 +35,6 @@
         <activity android:name=".modules.tablayout.TabLayoutActivity"
             android:theme="@style/AppTheme"
             />
+        <activity android:name=".modules.material.TranslucentActivity" />
     </application>
 </manifest>
