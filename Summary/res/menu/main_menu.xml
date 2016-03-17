@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.lsj.summary">
+
+    <!--icon 文字 子menu-->
+    <item
+        android:id="@+id/collect"
+        android:icon="@drawable/ic_launcher"
+        android:title="收藏"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/download"
+                android:title="下载"></item>
+            <item
+                android:id="@+id/update"
+                android:title="更新"></item>
+        </menu>
+    </item>
+    <!--icon menu-->
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="withText"
+        android:title="分享"
+        app:showAsAction="always" />
+    <!--文字menu-->
+    <item
+        android:id="@+id/cancel"
+        android:title="取消订单"
+        android:showAsAction="withText"
+        app:showAsAction="always"
+        >
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/download_1"-->
+                <!--android:title="下载"></item>-->
+            <!--<item-->
+                <!--android:id="@+id/update_1"-->
+                <!--android:title="更新"></item>-->
+        <!--</menu>-->
+    </item>
+    <item
+        android:id="@+id/order"
+        android:showAsAction="withText"
+        android:title="生成订单"
+
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/open"
+        android:showAsAction="withText"
+        android:title="打开文件加长加长"
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="ifRoom" />
+    <!--overflow-->
+    <item
+        android:id="@+id/option_1"
+        android:showAsAction="never"
+        android:icon="@drawable/ic_launcher"
+        android:title="option_1" />
+    <item
+        android:id="@+id/option_2"
+        android:showAsAction="never"
+        android:icon="@drawable/ic_launcher"
+        android:title="option_2" />
+    <item
+        android:id="@+id/option_3"
+        android:showAsAction="never"
+        android:icon="@drawable/ic_launcher"
+        android:title="option_3" />
+    <item
+        android:id="@+id/option_4"
+        android:showAsAction="never"
+        android:icon="@drawable/ic_launcher"
+        android:title="option_4"
+        >
+        <menu>
+            <item
+                android:id="@+id/download_2"
+                android:title="下载"></item>
+            <item
+                android:id="@+id/update_2"
+                android:title="更新"></item>
+        </menu>
+    </item>
+</menu>

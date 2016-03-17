@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">summary</string>
+    <string name="listview">ListView</string>
+    <string name="material">Material</string>
+</resources>
