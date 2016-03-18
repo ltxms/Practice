@@ -28,13 +28,15 @@
            />
         <activity android:name=".modules.material.MaterialActivity"
             />
-        <activity android:name=".modules.material.NavigationActivity" />
+        <activity android:name=".modules.material.NavigationActivity"
+            android:theme="@style/DrawerLayoutTheme"/>
         <activity android:name=".modules.material.CoordinatorLayoutActivity" />
         <activity android:name=".modules.material.CoordinatiorActivity" />
         <activity android:name=".modules.material.CoordinatiorDemoActivity" />
         <activity android:name=".modules.tablayout.TabLayoutActivity"
             android:theme="@style/AppTheme"
             />
-        <activity android:name=".modules.material.TranslucentActivity" />
+        <activity android:name=".modules.material.TranslucentActivity"
+            android:theme="@style/DrawerLayoutTheme"/>
     </application>
 </manifest>

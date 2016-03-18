@@ -22,6 +22,7 @@
         android:id="@+id/share"
         android:icon="@drawable/ic_launcher"
         android:showAsAction="withText"
+        android:orderInCategory="5"
         android:title="分享"
         app:showAsAction="always" />
     <!--文字menu-->
@@ -29,6 +30,7 @@
         android:id="@+id/cancel"
         android:title="取消订单"
         android:showAsAction="withText"
+        android:orderInCategory="8"
         app:showAsAction="always"
         >
         <!--<menu>-->
@@ -44,12 +46,13 @@
         android:id="@+id/order"
         android:showAsAction="withText"
         android:title="生成订单"
-
+        android:orderInCategory="100"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/open"
         android:showAsAction="withText"
         android:title="打开文件加长加长"
+        android:orderInCategory="200"
         android:icon="@drawable/ic_launcher"
         app:showAsAction="ifRoom" />
     <!--overflow-->
@@ -57,11 +60,13 @@
         android:id="@+id/option_1"
         android:showAsAction="never"
         android:icon="@drawable/ic_launcher"
+        android:orderInCategory="1"
         android:title="option_1" />
     <item
         android:id="@+id/option_2"
         android:showAsAction="never"
         android:icon="@drawable/ic_launcher"
+        android:orderInCategory="2"
         android:title="option_2" />
     <item
         android:id="@+id/option_3"

@@ -1,8 +1,10 @@
 package com.lsj.summary.modules.material;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -22,6 +24,7 @@ public class NavigationActivity extends BaseActivity {
     private FrameLayout frameLayout;
     private Toolbar toolbar;
     private ListView listView;
+    private ActionBarDrawerToggle toggle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,12 +37,15 @@ public class NavigationActivity extends BaseActivity {
         toolbar = getView(R.id.toolbar);
         listView = getView(R.id.listview);
 
-
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+        drawerLayout.setDrawerListener(toggle);
 
         ItemAdapter adapter = new ItemAdapter(getContext());
         listView.setAdapter(adapter);
 
         setToolbar(toolbar, "Summary");
+
+        drawerLayout.setScrimColor(getResources().getColor(R.color.colorPrimary));
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -70,5 +76,25 @@ public class NavigationActivity extends BaseActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        toggle.syncState();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (toggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        toggle.onConfigurationChanged(newConfig);
     }
 }
