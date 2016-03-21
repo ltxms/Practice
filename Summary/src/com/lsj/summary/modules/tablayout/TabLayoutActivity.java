@@ -1,5 +1,6 @@
 package com.lsj.summary.modules.tablayout;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -21,6 +22,10 @@ public class TabLayoutActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tablayout_activity);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.white));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.white));
+        }
 
         tabLayout = getView(R.id.tablayout);
         viewPager = getView(R.id.viewpager);

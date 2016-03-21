@@ -1,5 +1,6 @@
 package com.lsj.summary.modules.material;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
@@ -17,6 +18,10 @@ public class CoordinatiorActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.coordinatior_activity);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.white));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.white));
+        }
 
         CollapsingToolbarLayout collapsingToolbarLayout = getView(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitle("This is a Toolbar");

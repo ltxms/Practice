@@ -1,12 +1,15 @@
 package com.lsj.summary.modules.material;
 
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 
@@ -30,6 +33,10 @@ public class NavigationActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_activity);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.white));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.white));
+        }
 
         navigationView = getView(R.id.navigation_view);
         drawerLayout = getView(R.id.drawer_layout);
@@ -44,6 +51,12 @@ public class NavigationActivity extends BaseActivity {
         listView.setAdapter(adapter);
 
         setToolbar(toolbar, "Summary");
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(Gravity.LEFT);
+            }
+        });
 
         drawerLayout.setScrimColor(getResources().getColor(R.color.colorPrimary));
 
